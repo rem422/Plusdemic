@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     scroll-behavior: smooth;
@@ -68,16 +69,17 @@ a {
 /* scroll to top btn */
 .scroll-up-btn {
     position: fixed;
-    height: 45px;
-    width: 45px; 
-    background: var(--main-color);
+    height: 30px;
+    width: 30px; 
+    background: var(--secondary-color);
     right: 30px;
     bottom: 10px;
     text-align: center;
-    line-height: 45px;
-    color: #fff;
+    line-height: 34px;
+    color: var(--white);
     z-index: 1;
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
     opacity: 0;
@@ -97,7 +99,7 @@ a {
 
 /*menu-btn */
 .menu-btn{
-    color: #fff;
+    color: var(--black);
     font-size: 1.7rem;
     cursor: pointer;
     display: none;
@@ -109,7 +111,8 @@ a {
     background-color: var(--white);
     position: fixed; 
     top: 0; 
-    width: 100%; 
+    width: 100%;
+    transition: all .2s ease; 
 }
 .navbar.active {
     box-shadow: 5px 5px 5px rgba(1, 1, 1, .2);
