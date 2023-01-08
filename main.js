@@ -1,14 +1,22 @@
-let navbar = document.querySelector(".navbar");
-let scroll_btn = document.querySelector(".scroll-up-btn")
-let year = document.querySelector(".year")
+const hamburger = document.querySelector('.navbar .menu-btn');
+const mobile_menu = document.querySelector('.navbar .nav-menu');
+const menu_item = document.querySelectorAll('.navbar .nav-menu .nav-list .nav-link');
+const navbar = document.querySelector(".navbar");
+const scroll_btn = document.querySelector(".scroll-up-btn")
+const year = document.querySelector(".year")
 
+// Mobile menu responsiveness
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('activated');
+    mobile_menu.classList.toggle('activated');
+})
 
-
-
-
-
-
-
+menu_item.forEach((item) => {
+    item.addEventListener('click', () => {
+        hamburger.classList.toggle('activated');
+        mobile_menu.classList.toggle('activated');
+    })
+})
 
 document.addEventListener('scroll', () => {
     let scroll_position = window.scrollY;
@@ -28,10 +36,10 @@ document.addEventListener('scroll', () => {
     }
 })
 
-// When the scroll-btn is click it takes us to the top of the page
+// When clicked takes us to the top of the page
 scroll_btn.addEventListener('click', () => {
     document.documentElement.scrollTop = 0;
 })
 
 // footer copyright year update
-// year.textContent = new Date().getFullYear();
+year.textContent = new Date().getFullYear();
