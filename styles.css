@@ -76,7 +76,6 @@ a {
     color: var(--secondary-color);
 }
 
-
 /* scroll to top btn */
 .scroll-up-btn {
     position: fixed;
@@ -418,11 +417,12 @@ a {
     
 }
 
-@media only screen and (max-width:960px){
-
-}
-
 @media only screen and (max-width:768px){
+    header,
+    section {
+        margin: 3rem 0;
+    }
+
     .navbar .nav-menu{
         display: block;
         position: fixed;
@@ -458,9 +458,158 @@ a {
     cursor: pointer;
     display: block;
 }
+
+/* Hero section */
+.hero {
+    padding-top: 3rem;
+}
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
 }
 
+.hero-info {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.hero-info-header {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
+}
+
+.hero-info-text {
+    font-size: 1rem;
+}
+
+/* customer section && about section */
+.customer-wrapper,
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+}
+
+/* Blog section */
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 3rem 0;
+}
+
+}
+
+
 @media only screen and (max-width:500px){
+    header,
+    section {
+        margin: 2rem 0;
+}
+
+    /* logo */
+    .logo a, 
+    .logo span{
+    font-size: 1.2rem;
+}
+
+/* hero section */
+.hero-info-header {
+    font-size: 1.6rem;
+}
+
+.hero-info-text {
+    font-size: .8rem;
+    text-align: center;
+}
+
+.hero-info-cta a {
+    font-size: .8rem;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+}
+
+.hero-img-column {
+    flex: 30%;
+}
+
+/* customer section && about section */
+.customer-wrapper,
+.about-wrapper {
+    text-align: center;
+}
+
+.customer-cards,
+.about-cards{
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: .5rem;
+}
+
+.customer-card-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.customer-info-heading h2,
+.about-info-heading h2,
+.blog-title h1 {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+/* About section */
+.about-card-img img {
+    width: 100%;
+}
+
+/* blog section */
+.blog-cards {
+    padding-top: 1.6rem;
+    margin: 0rem;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer {
+    padding-bottom: .5rem;
+}
+
+.footer-wrapper {
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-info .logo {
+    padding-bottom: 1rem;
+}
+
+.footer-socials {
+    margin-top: 1rem;
+}
+
+.footer-social-icon a {
+    font-size: 1rem;
+    margin: 0 .5rem;
+}
+
+.footer-text p,
+.copyright {
+    font-size: .8rem;
+}
 
 }
 
