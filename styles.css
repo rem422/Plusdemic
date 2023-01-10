@@ -459,6 +459,11 @@ a {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
 }
+
+.customer-card {
+    margin-right: 0;
+}
+
 }
 
 @media only screen and (max-width:768px){
