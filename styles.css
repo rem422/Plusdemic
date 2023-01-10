@@ -122,7 +122,8 @@ a {
     position: fixed; 
     top: 0; 
     width: 100%;
-    transition: var(--transition); 
+    transition: var(--transition);
+    z-index: 999; 
 }
 .navbar.active {
     box-shadow: 5px 5px 5px rgba(1, 1, 1, .2);
@@ -438,20 +439,6 @@ a {
 }
 
 @media only screen and (max-width:960px){
-    /* Blog section */
-.blog-cards {
-    display: flex;
-    flex-direction: column;
-    margin: 0 3rem;
-}
-
-.blog-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 3rem 0;
-}
-
 /* customer section && about section */
 .customer-wrapper,
 .about-wrapper {
@@ -464,6 +451,19 @@ a {
     margin-right: 0;
 }
 
+/* Blog section */
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 3rem 0;
+}
 }
 
 @media only screen and (max-width:768px){
